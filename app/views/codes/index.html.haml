@@ -1,0 +1,20 @@
+=render "header"
+
+%table
+  %thead
+    %tr
+      %th タグ
+      %th タイトル
+      %th エラーの内容
+      %th 調べたこと
+      %th 仮説
+      %th 検証の結果
+  %tbody
+    - @codes.each do |code|
+      %tr
+        %td= code.tag.keyword
+        %td= code.title
+        %td= code.error_content
+        %td= code.checked_content
+        %td= code.hypothesis
+        %td= code.result
