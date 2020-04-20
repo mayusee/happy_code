@@ -1,0 +1,10 @@
+=render "header"
+
+.codes-new
+  = form_with model: @code, class: :for__contents, local: true do |f|
+    = f.text_area :title, placeholder: "解決したいこと", class: :form__content, size: "200x2"
+    = f.text_area :error_content, placeholder: "エラーの内容", class: :form__content, size: "200x5"
+    = f.text_area :checked_content, placeholder: "調べたこと", class: :form__content, size: "200x5"
+    = f.text_area :hypothesis, placeholder: "仮説", class: :form__content, size: "200x5"
+    = f.text_area :result, placeholder: "検証の結果", class: :form__content, size: "200x5"
+    = f.submit '投稿する', class: :form__btn

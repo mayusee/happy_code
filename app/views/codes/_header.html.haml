@@ -1,6 +1,6 @@
 %header.header
-  %h1 Happycode
-%h3.header-nav
-  %li 投稿
-  %li 削除
-  %li 検索
+  %h1= link_to "Happycode" , root_path, class: "header-nav"
+  %h3.header-nav
+    %li= link_to "Code", new_code_path, class: "header-nav"
+    %li= link_to "Delete", class: "header-nav"
+    %li= link_to "Search", class: "header-nav"
